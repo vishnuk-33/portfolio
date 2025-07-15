@@ -1,0 +1,693 @@
+
+/*  navbar  */
+
+:root{
+    scroll-padding-block-start: 90px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,body{
+    scroll-behavior: smooth;
+    height: 198%;
+    width: 100%;
+    background-color: #F1EFEC;
+}
+.logo{
+    color: white;
+    text-transform: uppercase;
+}
+nav{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#123458;
+    position: relative;
+    height: 70px;
+}
+nav{
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+nav ul{
+    display: flex;
+    gap: 30px;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    color: #030303;
+}
+.manu-icon{
+    display: none;
+}
+.manu-icon i{
+    font-size: 30px;
+    color: white;
+}
+.closenav{
+    display: none;
+}
+@media screen and (max-width:600px){
+    nav ul{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        flex-direction: column;
+        right: 0;
+        background-color: #123458;
+        text-align: center;
+        gap: 0px;
+        overflow: hidden;
+    }
+    nav{
+        width: 100%;
+    }
+    nav ul li{
+        padding: 15px;
+    }
+    .manu-icon{
+        display: block;
+    }
+    #manulist{
+        transition: all 0.5s ease;
+    }
+    .closenav{
+       font-size: 40px;
+       color: white;
+       display: block;
+    }
+}
+
+/* End navbar  */
+
+/* landing page */
+
+.landing-page{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    gap: 7em;
+    align-items: center;
+    padding: 30px 12% 0;
+}
+.headers{
+    max-width: 800px;
+}
+.headers h2{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.headers h1{
+    font-size: 70px;
+    line-height: 2;
+    text-transform: uppercase;
+}
+.headers p{
+    font-size: 18px;
+    line-height: 23px;
+    margin: 25px 0 30px;
+}
+.btn-box{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+.btn-1{
+    padding: 15px 28px;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.btn-1:hover{
+ color: white;
+ box-shadow: 0 -100px 0 0 #123458 inset;
+    
+}
+.btn-2{
+    padding: 15px 28px;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.btn-2:hover{
+ color: white;
+ box-shadow: 0 -100px 0 0 #030303 inset;
+}
+.image img{
+    margin: 10%;
+    border-radius: 50%;
+    width: 450px;
+    background-color: #D4C9BE;
+}
+@media screen and (max-width:800px){
+    .image img{
+        position: absolute;
+        left: 40px;
+        bottom: -35em;
+    }
+    .headers p{
+        width: 550px;
+        
+    }
+}
+@media screen and (max-width:600px){
+    .image img{
+        position: absolute;
+        margin: 10px 10%;
+        bottom: -24em;
+        flex-direction: column;
+        width: 350px;
+    }
+    .headers p{
+        width: 415px;
+        font-size: 20px;
+    }
+}
+
+/* End landing page */
+
+/*  About Me  */
+
+.about-me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    padding: 30px;
+}
+.about-me img{
+    width: 450px;
+    margin: 20px 10%;
+    border-radius: 50%;
+    background-color: #D4C9BE;  
+}
+.about-content{
+    max-width: 800px;
+}
+.about-content h2{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.about-content p{
+    font-size: 18px;
+    margin:25px 0 30px;
+    line-height: 23px;
+}
+.about-container{
+    display: flex;
+    gap: 10px;
+    transition: 0.5s ease;
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: appear ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+
+}
+@keyframes appear{
+from{
+    opacity: 0;
+    scale: 0.5;
+}
+to{
+    opacity: 1;
+    scale: 1;
+}
+}
+.content-1{
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    background-color:#123458;
+}
+.content-2{
+    margin: 5px;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:#123458;
+}
+.content-3{
+    margin: 5px;
+    width: 200px;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:#123458;
+}
+
+:hover:where(.content-1,.content-2,.content-3){
+    background-color: #F1EFEC;
+    color: black;
+}
+.btn-box-2{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+    animation: silder ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+@keyframes silder{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+    }
+.btn-3{
+    padding: 15px 28px;
+    margin: 20px 0 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.btn-3:hover{
+    color: white;
+    box-shadow: 0 -100px 0 0 #123458 inset;   
+}
+
+.btn-4{
+    padding: 15px 28px;
+    margin: 20px 0 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.btn-4:hover{
+    color: white;
+    box-shadow: 0 -100px 0 0 #030303 inset;
+}
+@media screen and (max-width:800px){
+    .about-content{
+        position: absolute;
+        left: 40px;
+        bottom: -68em;
+    }
+    .about-content p{
+        width: 500px;
+    }
+    .about-image img{
+        position: absolute;
+        left: 40px;
+        bottom: -100em;
+    }
+    .about-container{
+        width: 300px;
+    }
+}
+@media screen and (max-width:600px){
+    .about-image img{
+        position: absolute;
+        left: 40px;
+        width: 350px;
+        bottom: -99em;
+    }
+    .about-content{
+        position: absolute;
+        bottom: -53em;
+        left: 60px;
+    }
+    .about-content p{
+        width: 400px;
+        font-size: 20px;
+    }
+    .content-3{
+        position: relative;
+        bottom: -13em;
+        left: -345px;
+        flex-direction: column;
+        animation: silder ease;
+        animation-timeline: view();
+        animation-range: entry 0% cover 30%;
+    }
+    .btn-box-2{
+        position: absolute;
+        bottom: -22em;
+        
+    }
+}
+
+/* End of about page */
+
+/* skills page */
+
+.skills h1{
+ font-size: 30px;
+ text-align: center;
+ text-transform: capitalize;
+}
+.front-end h2{
+    text-align: center; 
+    text-transform: uppercase;
+}
+.front-end h3{
+    margin: 5px;
+}
+.front-end{
+    list-style-type: none;
+    width: 500px;
+    margin: 60px 11%;
+    text-transform: uppercase;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #D4C9BE;
+    box-shadow: 2px 2px 10px black, -2px -2px 10px black;
+}
+.front-end li{
+    margin: 10px 0;
+    padding: 5px;
+}
+.bar{
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all  0.3s cubic-bezier(.25,.8,.25,1);
+}
+.bar span{
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
+}
+.html{
+    width: 90%;
+    animation: html 3s;
+}
+.css{
+    width: 70%;
+    animation: css 3s;
+}
+.javascript{
+    width: 45%;
+    animation: javascript 3s;
+}
+.react{
+    width: 60%;
+    animation: react 3s;
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 45%;
+    }
+}
+@keyframes react{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+.back-end{
+    list-style-type: none;
+    width: 500px;
+    margin: -425px 52%;
+    text-transform: uppercase;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #D4C9BE;
+    box-shadow: 2px 2px 10px black, -2px -2px 10px black;
+}
+.back-end h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+.back-end h3{
+    margin: 5px;
+}
+.back-end li{
+ margin: 10px 0;
+ padding: 5px;
+}
+.python{
+    width: 50%;
+    animation: python 3s;
+}
+.php{
+    width: 50%;
+    animation: php 3s;
+}
+.node{
+    width: 45%;
+    animation: node 3s;
+}
+.mysql{
+    width: 70%;
+    animation: mysql 3s;
+}
+@keyframes python{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes php{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes node{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 45%;
+    }
+}
+@keyframes mysql{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@media screen and (max-width:800px){
+    .skills{
+        position: absolute;
+        bottom: -105em;
+    }
+    .skills h1{
+        position: relative;
+        left: 3em;
+    }
+    .back-end{
+        position: relative;
+        width: 450px;
+        top: 28em;
+        left: -8em;
+    }
+    .front-end{
+        position: relative;
+        width: 450px;
+        left: 60px;
+    }
+}
+@media screen and (max-width:600px){
+    .skills{
+        position: absolute;
+        bottom: -103em;
+        left: 30px;
+    }
+    .front-end{
+        position: relative;
+        width: 350px;
+        left: 43px;
+    }
+    .back-end{
+        position: relative;
+        width: 350px;
+        left: -100px;
+    }
+}
+
+/* End skills page */
+
+/* contact */
+
+.contact{
+    margin: 34em 45%;
+}
+.contact h1{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 30px;
+}
+.contact-head{
+    padding: 20px 0;
+    margin: 10px -32%;
+    line-height: 35px;
+}
+.contact-head h2{
+    color: #123458;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.contact-head p{
+    margin: 5px -4em;
+    width: 400px;
+    font-size: 15px;
+}
+.contact-content{
+    margin: 5px -9em;
+}
+.contact-content input{
+  padding: 15px;
+  width: 450px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  border-bottom: 2px solid black;
+  background-color: #F1EFEC;
+}
+::placeholder{
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.btn-5{
+    margin: 1em 0 auto;
+    padding: 15px 28px;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.btn-5:hover{
+ color: white;
+ box-shadow: 0 -100px 0 0 #123458 inset;
+    
+}
+@media screen and (max-width:800px){
+    .contact{
+        position: relative;
+        bottom: -123em;
+        left: -47px;
+    }
+    .contact h1{
+        position: relative;
+        left: 5px;
+    }
+    .contact-head{
+        position: relative;
+        right: 20px;
+    }
+}
+@media screen and (max-width:600px){
+    .contact{
+        position: relative;
+        bottom: -120em;
+    }
+    .contact-content input{
+        position: relative;
+        width: 350px;
+        left: 3em;
+    }
+    .btn-5{
+        position: relative;
+        left: 52px;
+    }
+}
+
+/* End of contact page */
+
+/* footer */
+
+.footer{
+    position: relative;
+    bottom: 28em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #123458;
+    height: 70px;
+}
+.footer-head{
+  color: white;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+@media screen and (max-width:800px){
+    html,body{
+        height: 240%;
+    }
+    .footer{
+        position: relative;
+        top: 93em;
+    }
+    .footer-head{
+        font-size: 17px;
+    }
+}
+
+/* End of footer */ 
